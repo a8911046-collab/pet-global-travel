@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Global Passport - 寵物環球通行證</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>PET GLOBAL PASSPORT ✈️</h1>
+            <p>您的寵物環球通行證：一站式查詢貓狗跨國旅行法規與流程。</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="query-section">
+            <h2>🌍 選擇您的寵物旅程</h2>
+            <div class="controls">
+                <div class="control-group">
+                    <label for="pet-type">寵物種類：</label>
+                    <select id="pet-type">
+                        <option value="Dog">🐶 狗 (Dog)</option>
+                        <option value="Cat">🐱 貓 (Cat)</option>
+                    </select>
+                </div>
+
+                <div class="control-group search-container">
+                    <label for="country-from-input">出發國家 (From)：</label>
+                    <div class="input-group">
+                        <input type="text" id="country-from-input" placeholder="輸入國家名稱或代碼..." data-code="">
+                        <button type="button" class="dropdown-toggle" id="toggle-from-list">▼</button>
+                    </div>
+                    <div id="country-from-results" class="country-results"></div>
+                    <input type="hidden" id="country-from" value=""> 
+                </div>
+
+                <div class="control-group search-container">
+                    <label for="country-to-input">抵達國家 (To)：</label>
+                    <div class="input-group">
+                        <input type="text" id="country-to-input" placeholder="輸入國家名稱或代碼..." data-code="">
+                        <button type="button" class="dropdown-toggle" id="toggle-to-list">▼</button>
+                    </div>
+                    <div id="country-to-results" class="country-results"></div>
+                    <input type="hidden" id="country-to" value=""> 
+                </div>
+
+                <button id="search-button">開始查詢流程</button>
+            </div>
+        </section>
+
+        <hr class="separator">
+
+        <section id="result-section" class="hidden">
+            <h2 id="result-title"></h2>
+            
+            <div id="result-content">
+                </div>
+            
+            <button class="back-button" onclick="resetPage()">↩ 返回查詢</button>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>⚠️ 免責聲明：本資訊為寵物旅行參考原型，請務必以目的地國家的官方檢疫機構最新公告為準。</p>
+        <p>資料維護：[您的電子郵件或聯繫方式]</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
